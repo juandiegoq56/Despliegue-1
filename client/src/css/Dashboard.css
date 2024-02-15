@@ -1,0 +1,121 @@
+.card-container {
+  display: flex;
+   margin-top: 160px;
+  justify-content: center;
+  
+  }
+  .vista3{
+    font-family: 'Open Sans';
+    font-weight: 100;
+    background-repeat: no-repeat;
+    background-image: url(https://sistemainformacion.azteca-comunicaciones.com:8087/Images/bg/07.jpg);
+    overflow: hidden;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+}
+  .dashboard{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-wrap: wrap;
+    width: 95%;
+    
+  }
+  @media (max-width: 553px) {
+    .dashboard {
+      justify-content: flex-start;
+    }
+  }
+  @media (max-width: 917px) {
+    .dashboard {
+      justify-content: flex-start;
+    }
+  }
+  .img{
+    height: 20px;
+    width: 20px;
+  }
+  .contenedor{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+    width: 96%;
+   
+  }
+  .herramientas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+   
+  }
+  @media (max-width: 1103px) {
+    .herramientas {
+      justify-content: flex-start;
+    }
+  }
+  .Gestores{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-wrap: wrap;
+    width: 95%;
+    
+  }
+  
+  .card {
+    align-content: center;
+    background-color:  rgb(233, 232, 232);
+    border: 1px solid rgb(224, 226, 229);
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px rgb(136, 136, 136);
+    height: 200px;
+    margin: 6px;
+    overflow: hidden;
+    padding: 4px 2px 5px;
+    width: 200px;
+    
+     /* Determina el tamaño base de las tarjetas (3 en una fila) */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: inherit; /* Mantiene el color del texto heredado */
+     /* Agrega una transición suave para la transformación */
+     text-align:center
+  }
+  .centrar_img{
+    display: flex;
+    
+    justify-content: center;
+
+   
+  }
+  .brand {
+    font-family: 'Shojumaru', cursive, Arial, serif;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    width: 166px;
+  }
+ 
+  .centrar_img img{
+    width: 80px;
+    margin-bottom: 10PX;
+  }
+  .card:hover {
+    opacity: 0.8; /* Aplica una opacidad reducida al pasar el cursor por encima */
+  }
+  
+  
+  .card h1 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    color: #666;
+  }
+
+ 

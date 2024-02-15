@@ -1,0 +1,98 @@
+       
+       .vista1 {
+        font-family: 'Open Sans';
+        font-weight: 100;
+        background-repeat: no-repeat;
+        background-image: url(https://sistemainformacion.azteca-comunicaciones.com:8087/Images/bg/bg-12.jpg?v2018);
+        overflow: hidden;
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: center;
+        
+       }
+       .card1-body{
+        display: flex;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        margin-bottom: 20px;
+     
+        
+        }
+        #id-company-text {
+          color:blue !important;
+          display: flex;
+          justify-content: center;
+        }
+        
+        .centrar{
+           display: flex;
+           background-color: rgba(0, 0, 0, 0.5);
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           height: 50vh ;
+           border-radius: 2%;
+           
+           
+        }
+        
+        .centrar.form-control{
+            height      : 20px;
+        }
+        .input-group-text{
+          border-radius:14px;
+        }
+       .centrar input{
+ 
+        width: 100px;
+        height: 30px;
+        font-size: 20px;
+        font-family: 'Open Sans';
+        padding-left: 10px;
+        
+        margin: 6px;
+        
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+          
+          }
+        
+          #nombre-label {
+            width: 110px;
+            height: 30px;
+            font-size: 20px;
+            font-family: 'Open Sans';
+            padding-left: 10px;
+            border-left: 2px solid #ccc;
+            margin: 5px;
+          }
+          
+          
+         .boton{
+          display: flex ;
+          
+          justify-content: center;
+          width: 100%;
+         }
+          .card-header{
+           margin-bottom: 20px; 
+           
+          }
+          .container1{
+            margin-top: 150px;
+            
+          }
+
+          @media(max-width: 750px) {
+            .container1{
+              margin-top: 150px;
+            }
+          }
+          @media(max-width: 950px) {
+            .container1{
+              margin-top: 150px;
+            }
+          }

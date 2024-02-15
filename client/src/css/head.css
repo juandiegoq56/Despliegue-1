@@ -1,0 +1,535 @@
+html{                        /*El tamaño de los navegadores por defecto son 16px*/
+    font-size: 15px;          /*De esta manera el valor del navegador es de 10px*/
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden
+    
+}
+
+body,header,section,footer,#cards-home,#cards-capacidad {
+    font-family: "futura-light"
+    
+}
+
+.bg-azul {
+    background-color: #00a5c1
+}
+
+.c-azul {
+    color: #00a5c1
+}
+
+.bg-amarillo {
+    background-color: #eec931
+}
+
+.c-amarillo {
+    color: #eec931
+}
+
+.bg-azulO {
+    background-color: #2e376a
+}
+
+.c-azulO {
+    color: #2e376a
+}
+
+.bg-verde {
+    background-color: #78a55b
+}
+
+.c-verde {
+    color: #78a55b
+}
+
+.bg-rojo {
+    background-color: #d34242
+}
+
+.c-rojo {
+    color: #d34242
+}
+
+.bg-gris {
+    background-color: #f1f2f2
+}
+
+.c-gris {
+    color: #f1f2f2
+}
+
+.bg-grisO {
+    background-color: #303030
+}
+
+.c-grisO {
+    color: #303030
+}
+
+.c-text {
+    color: #484949
+}
+
+a:hover {
+    background: transparent!important;
+    color: #00a5c1!important
+}
+
+.sin-hover:hover {
+    color: #fff!important
+}
+
+.nav-item .user:hover,.bt-ncall a:hover {
+    background: #00a5c1!important;
+    color: #fff!important
+}
+
+.navbar-brand img {
+    width: 100%!important
+}
+
+.navbar-collapse .dropdown .dropdown-menu {
+    border-radius: 20px
+    
+    
+}
+
+#cards-home .card {
+    border-top-left-radius: 20%!important;
+    border-top-right-radius: 20px!important;
+    border-bottom-right-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+    box-shadow: 0 2px 4px 0 rgba(136,144,195,.2),0 5px 15px 0 rgba(37,44,97,.15)
+}
+
+#cards-home .card img {
+    border-top-left-radius: 20px!important;
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+    border-bottom-left-radius: 0!important
+}
+
+.card a {
+    color: #000!important
+}
+
+.card a:hover {
+    color: #000!important
+}
+
+.client:hover {
+    background-color: #00a5c1
+}
+
+.client:hover a {
+    color: #fff!important
+}
+
+#main-capacidad ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 10px
+}
+
+#main-capacidad ul li::before {
+    content: "•";
+    color: #00a5c1;
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 1.9em;
+    line-height: 35px;
+    vertical-align: -5px;
+    width: 15px
+}
+
+.card.border-inferior-card.mb-3.me-xl-3.me-lg-3.me-md-3.me-sm-3.me-0.ml-xl-3.ml-lg-3.ml-md-3.ml-sm-3.ml-3 {
+    border-bottom: 8px solid #00a5c1
+}
+
+.border-inferior {
+    border-bottom: 8px solid #00a5c1
+}
+
+.border-derecho {
+    border-right: 4px solid #00a5c1
+}
+
+footer a:hover {
+    color: #fff!important
+}
+
+.nav-item .active {
+    background: #00a5c1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px
+}
+
+.nav-item .active:hover {
+    background: #00a5c1!important;
+    color: #fff!important
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 15vw
+}
+
+@media(max-width: 576px) {
+    .navbar-brand img {
+        width:50%!important
+    }
+
+    .navbar,.nav,.card-group {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto
+    }
+
+    .carrusel-home,#main,#section-noticias,#main-capacidad,#section-cobertura {
+        margin-top: 130px
+    }
+
+    .dropdown-menu {
+        border: 0!important
+    }
+
+    .nav li a {
+        font-size: .65rem;
+        text-align: center
+    }
+    
+    .navbar-toggler {
+        margin-left: 63px
+    }
+
+    footer img {
+        width: 50%
+    }
+    
+    hr {
+        width: 75%;
+        height: 1px!important
+    }
+
+    footer .fab {
+        font-size: 1.3rem!important
+    }
+
+    #section-crc img {
+        width: 80%
+    }
+
+    .map-colombia img {
+        width: 60%
+    }
+
+    .select-dep {
+        width: 80%
+    }
+
+   
+}
+
+@media(min-width: 576px) {
+    .navbar-brand img {
+        width:56%!important
+    }
+
+    .navbar,.nav {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto
+    }
+
+    .dropdown-menu {
+        border: 0!important
+    }
+
+    .nav li a {
+        font-size:0.8rem;
+        text-align: center
+    }
+
+    .navbar-toggler {
+        margin-left: 120px
+    }
+
+    footer img {
+        width: 50%
+    }
+
+    hr {
+        width: 75%;
+        height: 1px!important
+    }
+
+    footer .fab {
+        font-size: 1.3rem!important
+    }
+
+    .select-dep {
+        width: 80%
+    }
+    .navbar .nav-item .dropdown-menu {
+        display: no;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        margin-top: 0
+    }
+    .navbar .nav-item:hover .dropdown-menu {
+        transition: .3s;
+        opacity: 1;
+        visibility: visible;
+        display: block;
+        top: 100%;
+        transform: rotateX(0deg)
+    }
+     
+    .navbar .dropdown-menu.fade-down {
+        top: 80%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%
+    }
+}
+
+@media(min-width: 768px) {
+    .carrusel-home,#main {
+        margin-top:120px
+    }
+
+    #main-capacidad,#section-noticias,#section-cobertura {
+        margin-top: 155px
+    }
+
+    .navbar-toggler {
+        margin-left: 417px
+    }
+
+    footer img {
+        width: 15%
+    }
+
+    #section-crc img {
+        width: 80%
+    }
+
+    .map-colombia img {
+        width: 60%
+    }
+
+    .select-dep {
+        width: 80%
+    }
+    
+    .navbar .nav-item .dropdown-menu {
+        display: no;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        margin-top: 0
+    }
+    .navbar .nav-item:hover .dropdown-menu {
+        transition: .3s;
+        opacity: 1;
+        visibility: visible;
+        display: block;
+        top: 100%;
+        transform: rotateX(0deg)
+    }
+     
+    .navbar .dropdown-menu.fade-down {
+        top: 80%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%
+    }
+   
+}
+
+@media all and (min-width: 992px) {
+    .navbar-brand img {
+        width:56%!important
+    }
+
+    .navbar .dropdown-menu-end {
+        right: 0;
+        left: auto
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        margin-top: 0
+    }
+
+    .navbar .dropdown-menu.fade-down {
+        top: 80%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%
+    }
+
+    .navbar .dropdown-menu.fade-up {
+        top: 180%
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        transition: .3s;
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+        transform: rotateX(0deg)
+    }
+
+    .navbar-toggler {
+        margin-left: 650px
+    }
+
+    .carrusel-home,#main {
+        margin-top: 156px
+    }
+
+    #main-capacidad,#section-noticias,#section-cobertura {
+        margin-top: 190px
+    }
+
+    #section-crc img {
+        width: 80%
+    }
+
+    .map-colombia img {
+        width: 60%
+    }
+
+    .select-dep {
+        width: 40%
+    }
+}
+
+@media(min-width: 1200px) {
+    .navbar-brand {
+        width:159px
+    }
+
+    .logo-azteca {
+        width: 56%!important
+    }
+
+    .navbar,.nav,.card-group,#cards-home .container {
+        width: 100%!important;
+        max-width: 82%!important;
+        margin: 0 auto!important
+    }
+    .nav li a {
+        font-size: 1rem!important;
+        text-align: center
+    }
+
+    .carrusel-home,#main {
+        margin-top: 140px
+    }
+
+    #main-capacidad,#section-noticias,#section-cobertura {
+        margin-top: 200px
+    }
+
+    .user {
+        margin-left: 25px
+    }
+
+    #section-crc img {
+        width: 80%
+    }
+
+    .map-colombia img {
+        width: 60%
+    }
+
+    .select-dep {
+        width: 40%
+    }
+
+    footer img {
+        width: 60%
+    }
+
+    hr {
+        width: 75%;
+        height: 1px!important
+    }
+
+    footer .fab {
+        font-size: 1.3rem!important
+    }
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    color: #2e376a!important
+}
+
+.border-top-acc-yellow {
+    border-top: 4px solid #eec931!important
+}
+
+.border-top-acc-blue {
+    border-top: 4px solid #2e376a!important
+}
+
+.border-top-acc-bluelight {
+    border-top: 4px solid #00a5c1!important
+}
+
+.border-top-acc-green {
+    border-top: 4px solid #78a55b!important
+}
+
+.border-top-acc-red {
+    border-top: 4px solid #d34242!important
+}
+
+.bg-acc-yellow {
+    background-color: #eec931!important
+}
+
+.bg-acc-blue {
+    background-color: #2e376a!important
+}
+
+.bg-acc-bluelight {
+    background-color: #00a5c1!important
+}
+
+.bg-acc-green {
+    background-color: #78a55b!important
+}
+
+.bg-acc-red {
+    background-color: #d34242!important
+}
+.container{
+    margin-top: 10px;
+}
+
+.btn-acc-lightblue {
+    color: #fff!important;
+    background-color: #00a5c1!important;
+    border-color: #00a5c1!important
+}
+
+.pse {
+    color: #2e376a!important
+}
+
+.pse:hover {
+    color: #2e376a!important;
+    background-color: #dbeff3!important
+}
+
+.cursor-link {
+    cursor: pointer
+}
