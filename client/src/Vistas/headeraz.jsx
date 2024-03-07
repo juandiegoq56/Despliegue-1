@@ -30,21 +30,16 @@ const Header = () => {
       <div class="bg-azulO ">
         <ul class="nav">
           <li class="nav-item nav-item pt-xl-1 pt-lg-1">
-            <a className="nav-link c-grisO p-xl-2 p-lg-2 text-white sin-hover" aria-current="page" href="https://www.aztecacomunicaciones.com/content/ISP-e-Integradores/ISP-e-Integradores/">ISP e Integradores</a>
-
-
+            <a className="nav-link c-grisO p-xl-2 p-lg-2 text-white sin-hover" aria-current="page" href="https://www.aztecacomunicaciones.com/content/ISP-e-Integradores/ISP-e-Integradores/" target="_blank">ISP e Integradores</a>
           </li>
           <li class="nav-item nav-item pt-xl-1 pt-lg-1">
-            <a class="nav-link c-grisO p-xl-2 p-lg-2 text-white  " aria-current="page" href="https://www.aztecacomunicaciones.com/content/ISP-e-Integradores/ISP-e-Integradores/">Empresarial</a>
-
+            <a class="nav-link c-grisO p-xl-2 p-lg-2 text-white  " aria-current="page" href="https://www.aztecacomunicaciones.com/content/ISP-e-Integradores/ISP-e-Integradores/" target="_blank">Empresarial</a>
           </li>
           <li class="nav-item nav-item pt-xl-1 pt-lg-1">
-            <a class="nav-link c-grisO p-xl-2 p-lg-2 text-white  " aria-current="page" href="https://www.aztecacomunicaciones.com/content/wholesale/wholesale/">Wholesale</a>
-
+            <a class="nav-link c-grisO p-xl-2 p-lg-2 text-white  " aria-current="page" href="https://www.aztecacomunicaciones.com/content/wholesale/wholesale/" target="_blank">Wholesale</a>
           </li>
           <li class="nav-item nav-item pt-xl-1 pt-lg-1">
-            <a class="nav-link c-grisO p-xl-2 p-lg-2 text-white  " aria-current="page" href="https://www.aztecacomunicaciones.com/content/gobierno/gobierno/">Gobierno</a>
-
+            <a class="nav-link c-grisO p-xl-2 p-lg-2 text-white  " aria-current="page" href="https://www.aztecacomunicaciones.com/content/gobierno/gobierno/" target="_blank">Gobierno</a>
           </li>
         </ul>
       </div>
@@ -61,22 +56,21 @@ const Header = () => {
           <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}>
               <ul class="navbar-nav mb-lg-0 ">
                 <li class="nav-item dropdown c-text fw-bold mt-xl-2 mt-lg-2 mt-md-0 mt-sm-0 mt-0">
-                
                   <a class="nav-link dropdown-toggle" href="/login" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Acerca de Azteca</a>
                   <ul class="dropdown-menu fade-up" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/azteca/quienes-somos/" >Qui&#233;nes Somos</a></li>
-                    <li><a class="dropdown-item c-azulO" href="https://www.gruposalinas.com/">Grupo Salinas</a></li>
-                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/Contenido/Boletin/" >Bolet&#237;n</a></li>
-                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/azteca/pnfo/" >PNFO</a></li>
-                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/azteca/trabaja-con-nosotros/" >Trabaja con nosotros</a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/azteca/quienes-somos/" target="_blank" >Qui&#233;nes Somos</a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.gruposalinas.com/" target="_blank">Grupo Salinas</a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/Contenido/Boletin/" target="_blank" >Bolet&#237;n</a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/azteca/pnfo/" target="_blank" >PNFO</a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/azteca/trabaja-con-nosotros/" target="_blank" >Trabaja con nosotros</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown c-text fw-bold mt-xl-2 mt-lg-2 mt-md-0 mt-sm-0 mt-0">
                   <a class="nav-link dropdown-toggle" href="/login" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Atenci&#243;n al cliente</a>
                   <ul class="dropdown-menu fade-up" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item c-azulO" href="/https://www.aztecacomunicaciones.com/content/atencion-al-cliente/canales-de-atencion/" >Canales de atenci&#243;n</a></li>
-                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/atencion-al-cliente/codigo-de-digitalizacion/" > C&#243;digo de digitalizaci&#243;n </a></li>
-                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/viewfile?parameter=InformacionUsuarios/MantenimientosProgramados.pdf" >Mantenimientos programados</a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/atencion-al-cliente/canales-de-atencion/" target="_blank" >Canales de atenci&#243;n</a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/atencion-al-cliente/codigo-de-digitalizacion/" target="_blank" > C&#243;digo de digitalizaci&#243;n </a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/viewfile?parameter=InformacionUsuarios/MantenimientosProgramados.pdf" target="_blank" >Mantenimientos programados</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown c-text fw-bold mt-xl-2 mt-lg-2 mt-md-0 mt-sm-0 mt-0">
@@ -85,25 +79,25 @@ const Header = () => {
                     Informaci&#243;n importante para el usuario
                   </a>
                   <ul class="dropdown-menu fade-up" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/informacion-importante-usuario/mapa-cobertura-fibra/" >Mapa de cobertura de transmisi&#243;n de fibra &#243;ptica</a></li>
-                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/informacion-importante-usuario/area-cubrimiento/" >&#193;rea de cubrimiento</a></li>
-                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/informacion-importante-usuario/comparador-de-tarifas/" >Comparador de tarifas</a></li>
-                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/viewfile?parameter=InformacionUsuarios/FactoresLimitaci%C3%B3nVelocidad.pdf">Factores limitaci&#243;n velocidad de internet</a></li>
-                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/informacion-importante-usuario/practicas-gestion-trafico/" >Pr&#225;cticas de gesti&#243;n del tr&#225;fico</a></li>
-                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/informacion-importante-usuario/test-de-velocidad/" >Test de velocidad</a></li>
-                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/informacion-importante-usuario/indicadores-calidad-servicio-internet/" >Indicadores de Calidad del Servicio de Internet</a></li>
-                    <li><a class="dropdown-item c-azulO" href="/content/informacion-importante-usuario/procedimiento-y-tramite-pqr" >Procedimiento y Tr&#225;mite PQR</a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/informacion-importante-usuario/mapa-cobertura-fibra/" target="_blank" >Mapa de cobertura de transmisi&#243;n de fibra &#243;ptica</a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/informacion-importante-usuario/area-cubrimiento/" target="_blank" >&#193;rea de cubrimiento</a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/informacion-importante-usuario/comparador-de-tarifas/" target="_blank" >Comparador de tarifas</a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/viewfile?parameter=InformacionUsuarios/FactoresLimitaci%C3%B3nVelocidad.pdf" target="_blank">Factores limitaci&#243;n velocidad de internet</a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/informacion-importante-usuario/practicas-gestion-trafico/" target="_blank" >Pr&#225;cticas de gesti&#243;n del tr&#225;fico</a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/informacion-importante-usuario/test-de-velocidad/" target="_blank" >Test de velocidad</a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/informacion-importante-usuario/indicadores-calidad-servicio-internet/" target="_blank" >Indicadores de Calidad del Servicio de Internet</a></li>
+                    <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/informacion-importante-usuario/procedimiento-y-tramite-pqr" target="_blank" >Procedimiento y Tr&#225;mite PQR</a></li>
                   </ul>
                 </li>
                 <li class="nav-item text-center mt-xl-2 mt-lg-2 mt-md-0 mt-sm-0 mt-0 mb-xl-0 mb-lg-0 mb-md-0 mb-sm-0 mb-2 mx-1">
                 {!isLogged ? null : (
-                  <a href='/perfil' className="nav-link bg-acc-yellow rounded-pill pse">
+                  <a href='/perfil' className="nav-link bg-acc-yellow rounded-pill pse" target="_blank">
                     USUARIO: {nombreCompleto}  {tipo ? "(Admin)" : "(Usuario)"}
                   </a>
               )}
 
                 </li>
-                <li class=" nav-item text-center mt-xl-2 mt-lg-2 mt-md-0 mt-sm-0 mt-0  mb-xl-0 mb-lg-0 mb-md-0 mb-sm-0 mb-2">
+                <li class="nav-item text-center mt-xl-2 mt-lg-2 mt-md-0 mt-sm-0 mt-0  mb-xl-0 mb-lg-0 mb-md-0 mb-sm-0 mb-2">
                 {isLogged ? (
             <a href="/" onClick={handleLogout} class="nav-link bg-acc-yellow rounded-pill pse" >Cerrar sesión</a>
             
@@ -129,6 +123,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
