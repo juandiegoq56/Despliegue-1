@@ -2,14 +2,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "../css/head.css";
 import logo from "../Content/logo.svg";
 import React, { useState} from 'react';
-
+import { nombreCompleto, numeroEmpleado } from '../components/datos'
 import rutas from '../components/useUser';
 
 const Header = () => {
   //const isLogged=false;
   const [isOpen, setIsOpen] = useState(false);
   const isLogged = rutas()
-  const nombreCompleto=rutas();
+  
   const tipo= localStorage.getItem('admin')
   const toggleMenu = () => {
     setIsOpen(!isOpen);

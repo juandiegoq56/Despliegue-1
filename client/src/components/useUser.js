@@ -11,12 +11,15 @@ function parseJwt (token) {
   const useTokenValidation = () => {
     let isLogged=false;
     let nombreCompleto='';
+    let numeroEmpleado='';
+    
     if(localStorage.getItem('token')===null){
        isLogged=false;
     }else if((parseJwt(localStorage.getItem('token')).exp * 1000 > Date.now())=== true){
       isLogged= true
       const payload = parseJwt(localStorage.getItem('token'));
-      nombreCompleto = payload.nombreCompleto;
+      const nombreCompleto = payload.nombreCompleto;
+      const numeroEmpleado = payload.numeroEmpleado;
      
     }
     else if((parseJwt(localStorage.getItem('token')).exp * 1000 > Date.now())=== false){
@@ -26,6 +29,6 @@ function parseJwt (token) {
       localStorage.removeItem('admin')
       isLogged= false
     } 
-    return isLogged,nombreCompleto;
+    return isLogged
     }
   export default useTokenValidation;

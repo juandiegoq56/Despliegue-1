@@ -7,7 +7,7 @@ module.exports.loginAD = (req, res) => {
     const Nombre1=req.body.Nombre + '@aztecom.corp';
     const password = req.body.password;
     const filter = `(sAMAccountName=${Nombre})`; // Filtrar por número de empleado
-    const attributes = ['cn', 'employeeID', 'mail', 'department','displayName'];
+    const attributes = ['cn', 'employeeID', 'mail', 'department','displayName', 'title','wWWHomePage'];
 
     const config = {
       url: 'ldap://10.142.16.225',
@@ -48,8 +48,12 @@ module.exports.loginAD = (req, res) => {
 
         console.log('Usuario encontrado:', users[0]);
         if (users[0].department === 'NOC') {
-          let nombreCompleto=users[0].displayName
-          const token = jwt.sign({ nombreCompleto}, "Stack", {
+          let nombreCompleto=users[0].displayName;
+          let numeroEmpleado=users[0].wWWHomePage;
+          let email=users[0].mail;
+          let departamento=users[0].department;
+          let cargo= users[0].title;
+          const token = jwt.sign({ nombreCompleto,numeroEmpleado,email,departamento,cargo}, "Stack", {
             expiresIn: '7m'
           });
           

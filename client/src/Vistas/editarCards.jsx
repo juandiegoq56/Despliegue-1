@@ -70,7 +70,7 @@ const EditForm = () => {
       });
 
       
-      navigate('/d2?fromEdit=true');
+      navigate('/editar?fromEdit=true');
       
 
 

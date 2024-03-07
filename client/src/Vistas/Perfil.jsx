@@ -1,9 +1,8 @@
 import "../css/perfil.css";
 import Header from './headeraz';
 import rutas from '../components/useUser';
+import { nombreCompleto, numeroEmpleado,email,departamento,cargo } from '../components/datos'
 function App5() {
-
-    const nombreCompleto=rutas();
     const Admin=localStorage.getItem('admin')
 
     return (
@@ -26,9 +25,13 @@ function App5() {
                 </section>
                 <section className="perfil-informacion">
                   <h4>Sus datos Son:</h4>
-                  <p className="perfil-datos">EMPLEADO:{nombreCompleto} </p>
-                  {Admin ? null :  <a href='/editar' className="perfil-nav-link bg-acc-yellow rounded-pill pse" > Editar Usuario  </a>}
-                  {Admin ? null :  <a href='/crear' className="perfil-nav-link bg-acc-yellow rounded-pill pse" > Crear Crear Usuario </a>}
+                  <p className="perfil-datos">Empleado:{nombreCompleto} </p>
+                  <p className="perfil-datos">Numero de Empleado:{numeroEmpleado} </p>
+                  <p className="perfil-datos">Cargo:{cargo} </p>
+                  <p className="perfil-datos">Departamento:{departamento} </p>
+                  <p className="perfil-datos">Email:{email} </p>
+                  {!Admin ? null :  <a href='/editar' className="perfil-nav-link bg-acc-yellow rounded-pill pse" > Editar Usuario  </a>}
+                  {!Admin ? null :  <a href='/crear' className="perfil-nav-link bg-acc-yellow rounded-pill pse" > Crear Crear Usuario </a>}
                 </section>
               </div>
               <div className="perfil-picture"></div> 
