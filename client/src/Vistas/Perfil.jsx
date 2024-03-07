@@ -2,32 +2,13 @@ import "../css/perfil.css";
 import Header from './headeraz';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import rutas from '../components/useUser';
+import { Link } from 'react-router-dom';
 function App5() {
-    
-    const [usuariosList, setUsuarios] = useState([]);
-   
-    useEffect(() => {
-        const val = async () => {
-          try {
-            const response = await axios.get('http://localhost:3001/usuarios');
-            const nombre = localStorage.getItem("Nombre");
-            const data = response.data;
-            const user = data.find(user => user.Nombre === nombre);
-            setUsuarios(user);
-          } catch (error) {
-            console.error(error);
-          }
-        };
-    
-        val(); 
-    
-        
-    
-      }, []);
-    
-   
-      
-    
+
+    const nombreCompleto=rutas();
+    const Admin=localStorage.getItem('admin')
+
     return (
         <body>
      <div className="separar">
@@ -35,7 +16,7 @@ function App5() {
      </div>
      
         <main>
-        
+
         <div class="margin-left"></div>
 
         <div class="principal">
@@ -54,18 +35,11 @@ function App5() {
                 </section>
                 <section class="informacion">
                     <h4>Sus datos Son:</h4>
-                    <p class="datos">Nombre:{usuariosList.Nombre} </p>
-                    <p class="datos">Apellidos: {usuariosList.Apellido} </p>
-                    <p class="datos">Email: {usuariosList.Email} </p>
-                    <p class="datos">Fecha de nacimiento: </p>
+                    <p class="datos">EMPLEADO:{nombreCompleto} </p>
+                    {!Admin ? null :  <a href='/editar' class="nav-link bg-acc-yellow rounded-pill pse" > Editar Usuario  </a>}
+                    {!Admin ? null :  <a href='/crear' class="nav-link bg-acc-yellow rounded-pill pse" > Crear Crear Usuario </a>}
                 </section>
-                <section class="botones"> 
-                    <div class="buttonEditar">
-                        <form action="/users/editar/<%= user.id %>" method="get" >
-                           
-                        </form>
-                    </div> 
-                </section>
+                
             </div>
 
             <div class="picture">

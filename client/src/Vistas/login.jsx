@@ -31,7 +31,7 @@ const App3 = () => {
     .then(result => {
         if (result.token) {
             localStorage.setItem('token', result.token);
-            localStorage.setItem('Nombre',Nombre)
+            
             
             // Redirigir al usuario a la página de inicio
             window.location.href = '/home';
@@ -41,6 +41,35 @@ const App3 = () => {
     })
     .catch(error => {
         alert(error.message); // Muestra el mensaje de error en un alert
+    });
+    // Llamada al endpoint en la base de datos local
+    fetch('http://localhost:3001/admin', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('no es admin');
+        }
+    })
+    .then(result => {
+        if (result.exists) {
+            localStorage.setItem('admin', result.exists);
+            localStorage.setItem('tipo',result.tipoAdmin);
+            // Redirigir al usuario a la página de inicio
+           
+        } else {
+            throw new Error('No es admin');
+            localStorage.setItem('admin', result.exists);
+        }
+    })
+    .catch(error => {
+        console.log(error.message); // Muestra el mensaje de error en un alert
     });
 }
  

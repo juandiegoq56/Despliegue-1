@@ -25,5 +25,14 @@ export const ProtectedRouteLogin = ({ children, redirectTo }) => {
     localStorage.removeItem('token');
     
   };
+  export const ProtectedAdmin = ({ children, redirectTo }) => {
+    const admin=localStorage.getItem('admin');
+    const isLogged=rutas();
+   if (admin && isLogged) {
+     return children || <Outlet />;
+   } else {
+     return <Navigate to={redirectTo} replace />;
+   }
+ };
   
-export default {ProtectedRoute,ProtectedRouteLogin};
+export default {ProtectedRoute,ProtectedRouteLogin,ProtectedAdmin};

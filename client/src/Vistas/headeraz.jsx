@@ -5,37 +5,27 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
 import rutas from '../components/useUser';
+
 const Header = () => {
   //const isLogged=false;
   const [isOpen, setIsOpen] = useState(false);
   const isLogged = rutas()
+  const nombreCompleto=rutas();
+  const tipo= localStorage.getItem('admin')
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  const [usuariosList, setUsuarios] = useState([]);
+  
    
-    useEffect(() => {
-        const val = async () => {
-          try {
-            const response = await axios.get('http://localhost:3001/usuarios');
-            const nombre = localStorage.getItem("Nombre");
-            const data = response.data;
-            const user = data.find(user => user.Nombre === nombre);
-            setUsuarios(user);
-          } catch (error) {
-            console.error(error);
-          }
-        };
     
-        val(); 
-    
-    
-      }, []);
   const handleLogout = () => {
     localStorage.removeItem('token')
     localStorage.removeItem('Nombre')
+    localStorage.removeItem('admin')
+    localStorage.removeItem('tipo')
     
   };
+ 
   return (
     <header id="header " class="fixed-top bg-white shadow-lg"style={{ marginBottom: '20px' }}>
       <div class="bg-azulO ">
@@ -107,7 +97,12 @@ const Header = () => {
                   </ul>
                 </li>
                 <li class="nav-item text-center mt-xl-2 mt-lg-2 mt-md-0 mt-sm-0 mt-0 mb-xl-0 mb-lg-0 mb-md-0 mb-sm-0 mb-2 mx-1">
-                {!isLogged ? null :  <a href='/perfil' class="nav-link bg-acc-yellow rounded-pill pse" >Usuario: {usuariosList.Nombre} {usuariosList.Apellido} </a>}
+                {!isLogged ? null : (
+                  <a href='/perfil' className="nav-link bg-acc-yellow rounded-pill pse">
+                    USUARIO: {nombreCompleto}  {tipo ? "(Admin)" : "(Usuario)"}
+                  </a>
+              )}
+
                 </li>
                 <li class=" nav-item text-center mt-xl-2 mt-lg-2 mt-md-0 mt-sm-0 mt-0  mb-xl-0 mb-lg-0 mb-md-0 mb-sm-0 mb-2">
                 {isLogged ? (
@@ -116,6 +111,7 @@ const Header = () => {
             ): (
               <a href="/" class="nav-link bg-acc-yellow rounded-pill pse" >Iniciar sesión</a>
             )}
+            
                 </li>
                 
                 <li class="nav-item text-center mt-xl-2 mt-lg-2 mt-md-0 mt-sm-0 mt-0 mb-xl-0 mb-lg-0 mb-md-0 mb-sm-0 mb-2 mx-1">

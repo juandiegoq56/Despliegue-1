@@ -12,17 +12,26 @@ function parseJwt (token) {
 
   const useTokenValidation = () => {
     let isLogged=false;
+    let nombreCompleto='';
+    let Nombre='';
+    let tipo='';
     if(localStorage.getItem('token')===null){
        isLogged=false;
     }else if((parseJwt(localStorage.getItem('token')).exp * 1000 > Date.now())=== true){
       isLogged= true
+      const payload = parseJwt(localStorage.getItem('token'));
+      nombreCompleto = payload.nombreCompleto;
+      Nombre=payload.username
+     
     }
     else if((parseJwt(localStorage.getItem('token')).exp * 1000 > Date.now())=== false){
       localStorage.removeItem('token')
       localStorage.removeItem('Nombre')
+      localStorage.removeItem('tipo')
+      localStorage.removeItem('admin')
       isLogged= false
-    }
-    return isLogged;
+    } 
+    return isLogged,nombreCompleto;
     }
     
 
