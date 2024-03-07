@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams,useNavigate  } from 'react-router-dom';
-
+import '../css/edit.css'
 const EditForm = () => {
 
   const { id } = useParams(); // Obtener el ID del elemento de la URL
   const [nombre, setNombre] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [url, setUrl] = useState('');
-  const [tipo, setTipo] = useState('Herramientas de monitoreo'); // Selección por defecto
+  const [tipo, setTipo] = useState(''); // Selección por defecto
   const [imagen, setImagen] = useState(null);
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -80,8 +80,8 @@ const EditForm = () => {
   };
 
   return (
-    <div>
-      <h1>Editar Datos</h1>
+    <div className="editar-aplicativo">
+      <h1>Editar Aplicativos</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Nombre:</label>
@@ -136,6 +136,8 @@ const EditForm = () => {
       </form>
     </div>
   );
+  
+    
 };
 
 export default EditForm;

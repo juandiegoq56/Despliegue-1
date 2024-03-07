@@ -8,20 +8,15 @@ function parseJwt (token) {
   
     return JSON.parse(jsonPayload);
   }
-  
-
   const useTokenValidation = () => {
     let isLogged=false;
     let nombreCompleto='';
-    let Nombre='';
-    let tipo='';
     if(localStorage.getItem('token')===null){
        isLogged=false;
     }else if((parseJwt(localStorage.getItem('token')).exp * 1000 > Date.now())=== true){
       isLogged= true
       const payload = parseJwt(localStorage.getItem('token'));
       nombreCompleto = payload.nombreCompleto;
-      Nombre=payload.username
      
     }
     else if((parseJwt(localStorage.getItem('token')).exp * 1000 > Date.now())=== false){
@@ -33,12 +28,4 @@ function parseJwt (token) {
     } 
     return isLogged,nombreCompleto;
     }
-    
-
-
-  
-    
- 
-  
-  
   export default useTokenValidation;

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link ,useLocation} from 'react-router-dom'; // Importa el componente Link
 import Header from './headeraz';
+import '../css/editar.css'
 const EditCard = () => {
   const [data, setData] = useState([]);
   const location = useLocation();
@@ -34,39 +35,43 @@ const EditCard = () => {
 
   return (
     <div>
-        <div><Header /></div>
-        
-      <h1>Aplicativos</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Eliminar</th>
-            <th>Editar</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map(item => (
-            <tr key={item.id}>
-              <td>{item.nombre}</td>
-              <td>{item.descripcion}</td>
-              <td>
-                <button className="btn-delete" onClick={() => handleDelete(item.id)}>Eliminar</button>
-              </td>
-              <td>
-                 {/* Agrega un botón de editar que redirija al formulario de edición */}
-                <Link to={`/editar/${item.id}`}>
-                  <button className="btn-edit">Editar</button>
-                </Link>
-                
-              </td>
+      <div><Header /></div>
+      <div className='aplicativos-separar'>
+       <div className='centrarh1'>
+        <h1>Aplicativos</h1>
+        </div>
+        <table className='aplicativos-table'>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Eliminar</th>
+              <th>Editar</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {data.map(item => (
+              <tr key={item.id}>
+                <td>{item.nombre}</td>
+                <td>{item.descripcion}</td>
+                <td>
+                  <button className="aplicativos-btn-delete" onClick={() => handleDelete(item.id)}>Eliminar</button>
+                </td>
+                <td>
+                   {/* Agrega un botón de editar que redirija al formulario de edición */}
+                  <Link to={`/editar/${item.id}`}>
+                    <button className="aplicativos-btn-edit">Editar</button>
+                  </Link>
+                  
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
+  
 };
 
 export default EditCard;

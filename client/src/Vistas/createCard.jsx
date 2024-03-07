@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Asegúrate de haber instalado axios previamente
 import { useNavigate  } from 'react-router-dom';
+import '../css/create.css'
 export default function Formulario() {
   const [nombre, setNombre] = useState('');
   const [descripcion, setDescripcion] = useState('');
@@ -61,22 +62,23 @@ export default function Formulario() {
   };
 
   return (
-    <div className="p-6">
+    <div className="crear-aplicativo p-6 formulario-limited">
+      <h1>Crear Aplicativo</h1>
       <label htmlFor="nombre" className="block text-sm font-medium text-gray-700">
         Nombre
       </label>
       <input type="text" id="nombre" value={nombre} onChange={handleNombreChange} className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
-
+  
       <label htmlFor="descripcion" className="block mt-4 text-sm font-medium text-gray-700">
         Descripción
       </label>
       <textarea id="descripcion" value={descripcion} onChange={handleDescripcionChange} rows="3" className="mt-1 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
-
+  
       <label htmlFor="url" className="block mt-4 text-sm font-medium text-gray-700">
         URL
       </label>
       <input type="text" id="url" value={url} onChange={handleUrlChange} className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
-
+  
       <label htmlFor="tipo" className="block mt-4 text-sm font-medium text-gray-700">
         Tipo
       </label>
@@ -91,13 +93,14 @@ export default function Formulario() {
         <option value="CRM">CRM</option>
         {/* Agrega más opciones según sea necesario */}
       </select>
-
+  
       <label htmlFor="imagen" className="block mt-4 text-sm font-medium text-gray-700">
         Imagen
       </label>
       <input type="file" id="imagen" onChange={handleImagenChange} accept="image/*" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
-
+  
       <button onClick={handleSubmit} className="mt-4 bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">Guardar</button>
     </div>
   );
+  
 }

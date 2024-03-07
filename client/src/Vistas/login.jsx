@@ -65,7 +65,7 @@ const App3 = () => {
            
         } else {
             throw new Error('No es admin');
-            localStorage.setItem('admin', result.exists);
+            
         }
     })
     .catch(error => {
@@ -73,7 +73,7 @@ const App3 = () => {
     });
 }
  
-// <Header /> onSubmit={handleSubmit}
+
   return (
   
 

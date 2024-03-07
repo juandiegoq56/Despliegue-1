@@ -1,0 +1,96 @@
+.crear-aplicativo {
+    font-family: Arial, sans-serif;
+  }
+  
+  .crear-aplicativo .p-6 {
+    padding: 1rem;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+  }
+  
+  .crear-aplicativo .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .crear-aplicativo .font-medium {
+    font-weight: 500;
+  }
+  
+  .crear-aplicativo .text-gray-700 {
+    color: #4a5568;
+  }
+  
+  .crear-aplicativo .mt-1 {
+    margin-top: 0.25rem;
+  }
+  
+  .crear-aplicativo .focus\:ring-indigo-500:focus {
+    outline: none;
+    ring: 2px solid #667eea;
+  }
+  
+  .crear-aplicativo .focus\:border-indigo-500:focus {
+    border-color: #667eea;
+  }
+  
+  .crear-aplicativo .block {
+    display: block;
+  }
+  
+  .crear-aplicativo .w-full {
+    width: 100%;
+  }
+  
+  .crear-aplicativo .shadow-sm {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  .crear-aplicativo .sm\:text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .crear-aplicativo .border-gray-300 {
+    border-color: #d2d6dc;
+  }
+  
+  .crear-aplicativo .rounded-md {
+    border-radius: 0.375rem;
+  }
+  
+  .crear-aplicativo .bg-indigo-500 {
+    background-color: #667eea;
+  }
+  
+  .crear-aplicativo .text-white {
+    color: #ffffff;
+  }
+  
+  .crear-aplicativo .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .crear-aplicativo .py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .crear-aplicativo .rounded-md {
+    border-radius: 0.375rem;
+  }
+  
+  .crear-aplicativo .hover\:bg-indigo-600:hover {
+    background-color: #5a67d8;
+  }
+  
+  .crear-aplicativo .focus\:outline-none:focus {
+    outline: none;
+  }
+  
+  .crear-aplicativo .focus\:bg-indigo-600:focus {
+    background-color: #5a67d8;
+  }
+  .formulario-limited {
+    max-width: 600px; /* Ajusta este valor según tus necesidades */
+    margin: 0 auto;
+  }

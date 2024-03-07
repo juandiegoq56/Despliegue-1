@@ -1,9 +1,6 @@
 import "../css/perfil.css";
 import Header from './headeraz';
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
 import rutas from '../components/useUser';
-import { Link } from 'react-router-dom';
 function App5() {
 
     const nombreCompleto=rutas();
@@ -11,48 +8,36 @@ function App5() {
 
     return (
         <body>
-     <div className="separar">
-     <Header />
-     </div>
-     
-        <main>
-
-        <div class="margin-left"></div>
-
-        <div class="principal">
-            <div class="containerper">
-
-                <section class="perfil">
-                    <h2>Perfil de usuario</h2>
+          <div className="perfil-separar">
+            <Header />
+          </div>
+          <main className="perfil-main">
+            <div className="perfil-margin-left"></div>
+            <div className="perfil-principal">
+              <div className="perfil-containerper">
+                <section className="perfil-perfil">
+                  <h2>Perfil de usuario</h2>
                 </section>
-                <section class="title-image">
-                    <div class="titleFoto"> 
-                        <h4>Foto de perfil:</h4>
-                    </div>
-                    <div class="img">
-                       
-                    </div>
+                <section className="perfil-title-image">
+                  <div className="perfil-titleFoto"> 
+                    <h4>Foto de perfil:</h4>
+                  </div>
+                  <div className="perfil-img"></div>
                 </section>
-                <section class="informacion">
-                    <h4>Sus datos Son:</h4>
-                    <p class="datos">EMPLEADO:{nombreCompleto} </p>
-                    {!Admin ? null :  <a href='/editar' class="nav-link bg-acc-yellow rounded-pill pse" > Editar Usuario  </a>}
-                    {!Admin ? null :  <a href='/crear' class="nav-link bg-acc-yellow rounded-pill pse" > Crear Crear Usuario </a>}
+                <section className="perfil-informacion">
+                  <h4>Sus datos Son:</h4>
+                  <p className="perfil-datos">EMPLEADO:{nombreCompleto} </p>
+                  {Admin ? null :  <a href='/editar' className="perfil-nav-link bg-acc-yellow rounded-pill pse" > Editar Usuario  </a>}
+                  {Admin ? null :  <a href='/crear' className="perfil-nav-link bg-acc-yellow rounded-pill pse" > Crear Crear Usuario </a>}
                 </section>
-                
+              </div>
+              <div className="perfil-picture"></div> 
             </div>
-
-            <div class="picture">
-                
-            </div> 
-             
-        </div>
-
-        <div class="margin-right"></div>
-          
-    </main>
-    </body>
-    );
+            <div className="perfil-margin-right"></div>
+          </main>
+        </body>
+      );
+      
   }
   
   export default App5;

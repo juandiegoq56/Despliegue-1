@@ -1,0 +1,55 @@
+.aplicativos-separar {
+    margin-top: 140px;
+  }
+  
+  .aplicativos-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  .aplicativos-table thead th {
+    background-color: #007BFF;
+    color: white;
+    text-align: left;
+    padding: 10px;
+  }
+  .editar-aplicativo h1 {
+    color: #333;
+    text-align: center;
+    
+  }
+  .centrarh1{
+    display: flex;
+    justify-content: center;
+  }
+  .aplicativos-table tbody td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .aplicativos-btn-delete, .aplicativos-btn-edit {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .aplicativos-btn-delete {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .aplicativos-btn-delete:hover {
+    background-color: #c82333;
+  }
+  
+  .aplicativos-btn-edit {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  .aplicativos-btn-edit:hover {
+    background-color: #0056b3;
+  }
+  

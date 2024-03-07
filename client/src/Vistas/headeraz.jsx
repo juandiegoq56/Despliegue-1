@@ -1,8 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../css/head.css";
 import logo from "../Content/logo.svg";
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 
 import rutas from '../components/useUser';
 
