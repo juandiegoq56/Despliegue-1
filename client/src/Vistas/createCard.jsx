@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios'; // Asegúrate de haber instalado axios previamente
 import { useNavigate  } from 'react-router-dom';
 import '../css/create.css'
+import Header from './headeraz';
 export default function Formulario() {
   const [nombre, setNombre] = useState('');
   const [descripcion, setDescripcion] = useState('');
@@ -39,7 +40,7 @@ export default function Formulario() {
       formData.append('imagen', imagen);
 
       // Enviamos todos los datos al backend
-      await axios.post('http://localhost:3001/create', formData, {
+      await axios.post('http://10.144.2.89:3001/create', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -63,7 +64,12 @@ export default function Formulario() {
 
   return (
     <div className="crear-aplicativo p-6 formulario-limited">
-      <h1>Crear Aplicativo</h1>
+    <div className="perfil-separar">
+            <Header />
+          </div>
+          <div className='centrarh1'>
+        <h1>Crear Aplicativo</h1>
+        </div>
       <label htmlFor="nombre" className="block text-sm font-medium text-gray-700">
         Nombre
       </label>

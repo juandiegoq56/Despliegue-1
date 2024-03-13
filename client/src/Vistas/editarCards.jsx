@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams,useNavigate  } from 'react-router-dom';
 import '../css/edit.css'
+import Header from './headeraz';
 const EditForm = () => {
 
   const { id } = useParams(); // Obtener el ID del elemento de la URL
@@ -15,7 +16,7 @@ const EditForm = () => {
 
  
   useEffect(() => {
-    axios.get(`http://localhost:3001/usuarios/${id}`)
+    axios.get(`http://10.144.2.89:3001/usuarios/${id}`)
       .then(response => {
         const { nombre, descripcion, url, tipo } = response.data;
         setNombre(nombre);
@@ -63,7 +64,7 @@ const EditForm = () => {
       formData.append('tipo', tipo);
       formData.append('imagen', imagen);
 
-      await axios.put(`http://localhost:3001/usuarios/${id}`, formData, {
+      await axios.put(`http://10.144.2.89:3001/usuarios/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -80,7 +81,11 @@ const EditForm = () => {
   };
 
   return (
+    
     <div className="editar-aplicativo">
+      <div className="perfil-separar">
+            <Header />
+          </div>
       <h1>Editar Aplicativos</h1>
       <form onSubmit={handleSubmit}>
         <div>

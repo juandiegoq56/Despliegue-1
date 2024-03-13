@@ -14,7 +14,7 @@ const EditCard = () => {
     }
   }, [location.search]);
   useEffect(() => {
-    axios.get('http://localhost:3001/usuarios')
+    axios.get('http://10.144.2.89:3001/usuarios')
       .then(response => {
         setData(response.data);
       })
@@ -24,7 +24,7 @@ const EditCard = () => {
   }, []);
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3001/usuarios/${id}`)
+    axios.delete(`http://10.144.2.89:3001/usuarios/${id}`)
       .then(response => {
         setData(data.filter(item => item.id !== id));
       })

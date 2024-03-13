@@ -1,9 +1,9 @@
 const ActiveDirectory = require('activedirectory2');
 const jwt = require('jsonwebtoken');
-
+const logAuditEvent = require('../Audit/auditoria.js')
 module.exports.loginAD = (req, res) => {
   try {
-    const Nombre = req.body.Nombre;
+    const Nombre = req.body.Nombre; 
     const Nombre1=req.body.Nombre + '@aztecom.corp';
     const password = req.body.password;
     const filter = `(sAMAccountName=${Nombre})`; // Filtrar por número de empleado
@@ -30,7 +30,7 @@ module.exports.loginAD = (req, res) => {
         console.log('Credenciales incorrectas');
         res.status(401).send("Credenciales incorrectas");
         return;
-      }
+      }else{
 
       // Si la autenticación es exitosa, buscar al usuario
       ad.findUsers({ filter, attributes }, (err, users) => {
@@ -54,14 +54,20 @@ module.exports.loginAD = (req, res) => {
           let departamento=users[0].department;
           let cargo= users[0].title;
           const token = jwt.sign({ nombreCompleto,numeroEmpleado,email,departamento,cargo}, "Stack", {
-            expiresIn: '7m'
+            expiresIn: '60m'
           });
-          
+          logAuditEvent('login', nombreCompleto, { 
+            numeroEmpleado, 
+            email, 
+            departamento, 
+            cargo 
+        });
           res.send({ token });
         } else {
           res.status(401).send("Credenciales invalidas o usuario no autorizado.");
         }
       });
+    }
     });
   } catch (error) {
     console.error('Error en la operación:', error);

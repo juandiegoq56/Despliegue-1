@@ -1,7 +1,6 @@
 const express = require('express');
 const multer = require('multer');
 const router  = express.Router();
-const {login} = require('../controllers/loginControllers');
 const {users} = require('../controllers/usersControllers')
 const { loginAD } = require('../controllers/loginControllersAd')
 const {insertarDatos,obtenerTarjetas, obtenerTarjetaPorId,editarTarjeta,borrar}=require('../controllers/createTarget')

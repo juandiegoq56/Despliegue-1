@@ -56,7 +56,7 @@ const Header = () => {
           <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}>
               <ul class="navbar-nav mb-lg-0 ">
                 <li class="nav-item dropdown c-text fw-bold mt-xl-2 mt-lg-2 mt-md-0 mt-sm-0 mt-0">
-                  <a class="nav-link dropdown-toggle" href="/login" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Acerca de Azteca</a>
+                  <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Acerca de Azteca</a>
                   <ul class="dropdown-menu fade-up" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/azteca/quienes-somos/" target="_blank" >Qui&#233;nes Somos</a></li>
                     <li><a class="dropdown-item c-azulO" href="https://www.gruposalinas.com/" target="_blank">Grupo Salinas</a></li>
@@ -66,7 +66,7 @@ const Header = () => {
                   </ul>
                 </li>
                 <li class="nav-item dropdown c-text fw-bold mt-xl-2 mt-lg-2 mt-md-0 mt-sm-0 mt-0">
-                  <a class="nav-link dropdown-toggle" href="/login" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Atenci&#243;n al cliente</a>
+                  <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Atenci&#243;n al cliente</a>
                   <ul class="dropdown-menu fade-up" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/atencion-al-cliente/canales-de-atencion/" target="_blank" >Canales de atenci&#243;n</a></li>
                     <li><a class="dropdown-item c-azulO" href="https://www.aztecacomunicaciones.com/content/atencion-al-cliente/codigo-de-digitalizacion/" target="_blank" > C&#243;digo de digitalizaci&#243;n </a></li>
@@ -74,7 +74,7 @@ const Header = () => {
                   </ul>
                 </li>
                 <li class="nav-item dropdown c-text fw-bold mt-xl-2 mt-lg-2 mt-md-0 mt-sm-0 mt-0">
-                  <a class="nav-link dropdown-toggle" href="/login" id="navbarDropdown" role="button" 
+                  <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" 
                     data-bs-toggle="dropdown" aria-expanded="false">
                     Informaci&#243;n importante para el usuario
                   </a>
@@ -91,7 +91,7 @@ const Header = () => {
                 </li>
                 <li class="nav-item text-center mt-xl-2 mt-lg-2 mt-md-0 mt-sm-0 mt-0 mb-xl-0 mb-lg-0 mb-md-0 mb-sm-0 mb-2 mx-1">
                 {!isLogged ? null : (
-                  <a href='/perfil' className="nav-link bg-acc-yellow rounded-pill pse" target="_blank">
+                  <a href='/perfil' className="nav-link bg-acc-yellow rounded-pill pse" >
                     USUARIO: {nombreCompleto}  {tipo ? "(Admin)" : "(Usuario)"}
                   </a>
               )}
